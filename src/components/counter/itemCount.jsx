@@ -4,11 +4,11 @@ import { BsDash, BsPlus } from "react-icons/bs";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
+
   return (
     <div>
       <h3>{counter}</h3>
       <Button
-        className="gap-3"
         variant="danger"
         onClick={() => {
           if (counter < stock) {
