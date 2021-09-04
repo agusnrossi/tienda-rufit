@@ -1,19 +1,30 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
 
-const Item = ({ id, title, price, pictureUrl }) => {
+const Item = ({ data }) => {
+  const { id, title, description, price, pictureUrl } = data;
+
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={pictureUrl} />
-      <Card.Body>
-        <Card.Title>
-          id:{id} {title}
-        </Card.Title>
-        <Card.Text>Detalle del producto.</Card.Text>
-        <p>${price}</p>
-        <Button variant="primary">Agregar al carrito</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <tr key={id}>
+        <td className="align-middle text-center">{id}</td>
+        <td className="align-middle text-center">{title}</td>
+        <td className="align-middle text-center">{description}</td>
+        <td className="align-middle text-center"> $ {price}</td>
+        <td className="align-middle text-center">
+          <img
+            src={pictureUrl}
+            style={{ width: "200px" }}
+            className="border border-dark rounded"
+            alt=""
+          />
+        </td>
+        <td className="align-middle text-center">
+          <button type="button" className="btn btn-primary">
+            Ver producto
+          </button>
+        </td>
+      </tr>
+    </>
   );
 };
 
