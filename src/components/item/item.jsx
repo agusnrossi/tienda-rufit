@@ -21,7 +21,7 @@ const Item = ({ data }) => {
           />
         </td>
         <td className="align-middle text-center">
-          <NavLink exact to={`../Item/${id}`}>
+          <NavLink exact to={`../item/${id}`}>
             <Button type="button" className="btn btn-primary">
               Ver producto
             </Button>

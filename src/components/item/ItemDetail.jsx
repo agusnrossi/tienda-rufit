@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import ItemCount from "../counter/itemCount";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ item }) => {
   const [cantCompra, setCantCompra] = useState(0);
+
+  const { addItem } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
     setCantCompra(cantidad);
   };
   return (
     <div>
-      <Card style={{ width: "18rem", padding: "10px" }}>
+      <Card
+        className="animate_bounceIn"
+        style={{ width: "18rem", padding: "10px" }}
+      >
         <img src={item.data.pictureUrl} className="card-img-top" alt="" />
         <img
           src={item.data.pictureUrl}
