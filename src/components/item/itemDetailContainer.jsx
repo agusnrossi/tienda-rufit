@@ -1,28 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { ItemDetail } from "../Item/ItemDetail";
+import ItemDetail from "../item/ItemDetail";
+import productos from "../../helper/productos";
+import { useParams } from "react-router";
 
-const producto = {
-  id: 1,
-  title: "Remera Rufit Azul",
-  description: "Remera de Rufian hombre",
-  category: "Remeras",
-  price: 900,
-  pictureUrl: "https://www.rufit.com.ar/media/productos/a_f9bUcDP.jpg",
-  amount: 10,
-};
 const getItem = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(producto);
+    resolve(productos);
   }, 2000);
 });
 
-export const ItemDetailContainer = () => {
-  const [item, setItem] = useState([]);
+const ItemDetailContainer = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState({
+    data: {},
+  });
 
   useEffect(() => {
     getItem.then((data) => {
       setItem({
-        data: data,
+        data: data.find((producto) => producto.id === parseInt(id)),
       });
     });
   }, []);
@@ -33,3 +29,5 @@ export const ItemDetailContainer = () => {
     </>
   );
 };
+
+export default ItemDetailContainer;

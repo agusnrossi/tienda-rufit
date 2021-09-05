@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from "react";
-import productos from "../../helper/productos";
+import React from "react";
 import Item from "./item";
 
-const ItemList = () => {
-  const [producto, setProducto] = useState([]);
-
-  useEffect(() => {
-    const getDatos = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 2000);
-    });
-    getDatos.then((data) => {
-      setProducto(data);
-    });
-  }, [producto]);
-
+const ItemList = ({ producto }) => {
   const listaItems = producto.length ? (
     producto.map((data) => {
-      return <Item data={data} key={data.id} />;
+      return <Item data={data} />;
     })
   ) : (
     <tr>
@@ -36,7 +22,6 @@ const ItemList = () => {
             <th className="text-center">Descripcion</th>
             <th className="text-center">Precio</th>
             <th className="text-center">Imagen</th>
-            <th className="text-center">Acciones</th>
           </tr>
         </thead>
         <tbody>{listaItems}</tbody>

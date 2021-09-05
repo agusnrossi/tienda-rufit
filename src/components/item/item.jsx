@@ -1,4 +1,6 @@
+import { Button } from "react-bootstrap";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Item = ({ data }) => {
   const { id, title, description, price, pictureUrl } = data;
@@ -19,9 +21,11 @@ const Item = ({ data }) => {
           />
         </td>
         <td className="align-middle text-center">
-          <button type="button" className="btn btn-primary">
-            Ver producto
-          </button>
+          <NavLink exact to={`../Item/${id}`}>
+            <Button type="button" className="btn btn-primary">
+              Ver producto
+            </Button>
+          </NavLink>
         </td>
       </tr>
     </>

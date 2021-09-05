@@ -1,14 +1,11 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./components/navbar/navbar";
-import ItemListContainer from "./components/item/itemListContainer";
+import RouterApp from "./Router/Router";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      {""}
-      <ItemListContainer greeting="Aqui va el detalle" />
+      <RouterApp />
     </div>
   );
 }
