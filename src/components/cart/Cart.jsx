@@ -40,7 +40,9 @@ const Cart = () => {
       {cart.length !== 0 && (
         <div className="row">
           <div className="col-md-4 offset-md-4">
-            <p>{cartTotal.toString()}</p>
+            <p>Total : ${cartTotal.toString()}</p>
+          </div>
+          <div className="col-md-6 offset-md-3">
             <div className="d-flex justify-content-around mt-3">
               <NavLink className="btn btn-primary" exact to={"/"}>
                 Seguir Comprando
@@ -48,6 +50,9 @@ const Cart = () => {
               <Button className="btn btn-danger" onClick={() => clear()}>
                 Vaciar carrito
               </Button>
+              <NavLink className="btn btn-success" exact to={"/checkout"}>
+                Finalizar Compra
+              </NavLink>
             </div>
           </div>
         </div>

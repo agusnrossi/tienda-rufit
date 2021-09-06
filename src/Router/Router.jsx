@@ -4,6 +4,7 @@ import NavBar from "../components/navbar/navbar";
 import ItemDetailContainer from "../components/item/itemDetailContainer";
 import ItemListContainer from "../components/item/itemListContainer";
 import Cart from "../components/cart/Cart";
+import { Checkout } from "../components/checkout/checkout";
 
 const RouterApp = () => {
   return (
@@ -20,6 +21,7 @@ const RouterApp = () => {
           />
           <Route exact path="/item/:id" component={ItemDetailContainer} />
           <Route exact path="/cart" component={Cart} />
+          <Route exact path="/checkout" component={Checkout} />
           <Redirect to="/" />
         </Switch>
       </div>
