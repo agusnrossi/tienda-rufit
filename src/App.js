@@ -6,7 +6,6 @@ import { CartProvider } from "./providers/CartProvider";
 function App() {
   return (
     <div className="App">
-      <RouterApp />
       <CartProvider>
         <RouterApp />
       </CartProvider>

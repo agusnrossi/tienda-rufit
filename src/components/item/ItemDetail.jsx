@@ -12,6 +12,7 @@ const ItemDetail = ({ item }) => {
   const onAdd = (cantidad) => {
     setCantCompra(cantidad);
   };
+
   return (
     <div>
       <Card
@@ -33,9 +34,30 @@ const ItemDetail = ({ item }) => {
           <ItemCount stock={item.data.amount} initial={1} onAdd={onAdd} />
         )}
         {cantCompra !== 0 && (
-          <Button variant="success" as={Link} exact to={"/cart"}>
-            Terminar compra{" "}
-          </Button>
+          <div className="container">
+            <div className="row">
+              <Button
+                className="btn btn-outline-primary mb-2"
+                as={Link}
+                exact
+                to={"/"}
+                onClick={() => addItem({ item, cantCompra })}
+              >
+                Agregar al Carrito y Seguir Comprando
+              </Button>
+            </div>
+            <div className="row">
+              <Button
+                variant="success"
+                as={Link}
+                exact
+                to={"/cart"}
+                onClick={() => addItem({ item, cantCompra })}
+              >
+                Terminar compra{" "}
+              </Button>
+            </div>
+          </div>
         )}
       </Card>
     </div>
