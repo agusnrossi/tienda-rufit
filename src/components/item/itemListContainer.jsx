@@ -1,34 +1,38 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import productos from "../../helper/productos";
 import { useParams } from "react-router";
 import ItemList from "./itemList";
-
-const listaProductos = new Promise((resolve) => {
-  setTimeout(function () {
-    resolve(productos);
-  }, 2000);
-});
+import { getFirestore } from "../../firebase/firebase";
 
 const ItemListContainer = () => {
   const { category } = useParams();
 
-  const [producto, setProducto] = useState({
-    data: [],
-  });
+  const [producto, setProducto] = useState([]);
 
   useEffect(() => {
-    listaProductos.then((data) => {
-      if (category === undefined) {
-        setProducto({
-          data: data,
-        });
-      } else {
-        setProducto({
-          data: data.filter((producto) => producto.category === category),
-        });
-      }
-    });
+    const db = getFirestore();
+    let itemCollection;
+
+    if (category) {
+      itemCollection = db
+        .collection("item")
+        .where("category", "==", `${category}`);
+    } else {
+      itemCollection = db.collection("item");
+    }
+
+    const itemCollectionQuery = itemCollection.get();
+    itemCollectionQuery
+      .then((querySnapshot) => {
+        let documento = querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setProducto(documento);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   }, [category]);
 
   return (

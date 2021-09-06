@@ -17,7 +17,6 @@ const ItemList = ({ producto }) => {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th className="text-center">ID</th>
             <th className="text-center">Titulo</th>
             <th className="text-center">Descripcion</th>
             <th className="text-center">Precio</th>

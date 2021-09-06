@@ -7,24 +7,19 @@ export const CartDetailList = ({ data }) => {
 
   const { removeItem } = useContext(CartContext);
 
-  let precioTotalPorObjeto = item.data.price * cantCompra;
+  let precioTotalPorObjeto = item.price * cantCompra;
 
   return (
     <>
-      <tr key={item.data.id}>
-        <td className="align-middle text-center fw-bold">{item.data.id}</td>
-        <td className="align-middle text-center fw-bold">{item.data.title}</td>
-        <td className="align-middle text-center fw-bold">
-          {item.data.description}
-        </td>
-        <td className="align-middle text-center fw-bold">
-          {" "}
-          $ {item.data.price}
-        </td>
+      <tr key={item.id}>
+        <td className="align-middle text-center fw-bold">{item.id}</td>
+        <td className="align-middle text-center fw-bold">{item.title}</td>
+        <td className="align-middle text-center fw-bold">{item.description}</td>
+        <td className="align-middle text-center fw-bold"> $ {item.price}</td>
         <td className="align-middle text-center">
           <img
             alt=""
-            src={item.data.pictureUrl}
+            src={item.pictureUrl}
             style={{ width: "200px" }}
             className="border border-dark rounded"
           />
@@ -37,7 +32,7 @@ export const CartDetailList = ({ data }) => {
           <Button
             variant="primary"
             onClick={() => {
-              removeItem(item.data.id);
+              removeItem(item.id);
             }}
           >
             Eliminar

@@ -8,7 +8,6 @@ const Item = ({ data }) => {
   return (
     <>
       <tr key={id}>
-        <td className="align-middle text-center">{id}</td>
         <td className="align-middle text-center">{title}</td>
         <td className="align-middle text-center">{description}</td>
         <td className="align-middle text-center"> $ {price}</td>
