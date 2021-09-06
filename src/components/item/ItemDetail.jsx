@@ -15,10 +15,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="d-flex justify-content-center my-5">
-      <div
-        className="card animate__bounceIn"
-        style={{ width: "30rem", padding: "10px" }}
-      >
+      <div className="card" style={{ width: "30rem", padding: "10px" }}>
         <img
           src={item.pictureUrl}
           alt={item.description}

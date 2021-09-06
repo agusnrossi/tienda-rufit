@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { CartDetailList } from "./CartDetailList";
 import { NavLink } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 const Cart = () => {
   const { cart, clear, cartTotal } = useContext(CartContext);
@@ -13,21 +12,21 @@ const Cart = () => {
     })
   ) : (
     <tr>
-      <td colSpan={6}>Carrito vacio</td>
+      <td colSpan={8}>Sin objetos en el carrito...</td>
       <NavLink exact to={"/"}>
-        <Button variant="danger">volver</Button>
+        <button className="btn btn-dark">Volver al inicio</button>
       </NavLink>
     </tr>
   );
+
   return (
-    <div className="Container">
+    <div className="container">
       <h1 className="text-center mt-2">Terminar mi compra</h1>
       <table className="table table-striped">
         <thead>
           <tr>
             <th className="text-center">Título</th>
             <th className="text-center">Descripcion</th>
-            <th className="text-center">Precio</th>
             <th className="text-center">Imagen</th>
             <th className="text-center">Precio por unidad</th>
             <th className="text-center">Cantidad Seleccionada</th>
@@ -40,16 +39,20 @@ const Cart = () => {
       {cart.length !== 0 && (
         <div className="row">
           <div className="col-md-4 offset-md-4">
-            <p>Total : ${cartTotal.toString()}</p>
+            <div className="d-flex justify-content-around mt-3">
+              <p className="text-center fw-bolder btn btn-dark">
+                Total de la Compra: $ {cartTotal}
+              </p>
+            </div>
           </div>
           <div className="col-md-6 offset-md-3">
             <div className="d-flex justify-content-around mt-3">
               <NavLink className="btn btn-primary" exact to={"/"}>
                 Seguir Comprando
               </NavLink>
-              <Button className="btn btn-danger" onClick={() => clear()}>
+              <button className="btn btn-danger" onClick={() => clear()}>
                 Vaciar carrito
-              </Button>
+              </button>
               <NavLink className="btn btn-success" exact to={"/checkout"}>
                 Finalizar Compra
               </NavLink>

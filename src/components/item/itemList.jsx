@@ -15,14 +15,14 @@ const ItemList = ({ producto }) => {
   return (
     <div className="container my-5">
       <table className="table table-striped">
-        <thead>
+        <tbody>
           <tr>
             <th className="text-center">Titulo</th>
             <th className="text-center">Descripcion</th>
             <th className="text-center">Precio</th>
             <th className="text-center">Imagen</th>
           </tr>
-        </thead>
+        </tbody>
         <tbody>{listaItems}</tbody>
       </table>
     </div>

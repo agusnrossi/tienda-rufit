@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import { useParams } from "react-router";
 import ItemList from "./itemList";
 import { getFirestore } from "../../firebase/firebase";
@@ -37,12 +36,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <Card>
-        <Card.Body>
-          <ItemList producto={producto} />
-          <br />
-        </Card.Body>
-      </Card>
+      <ItemList producto={producto} />
     </div>
   );
 };
