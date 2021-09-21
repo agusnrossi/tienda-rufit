@@ -5,7 +5,15 @@ import { CartProvider } from "./providers/CartProvider";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App "
+      style={{
+        backgroundImage: 'url("//img/club_rufian_fondo.jpg")',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <CartProvider>
         <RouterApp />
       </CartProvider>

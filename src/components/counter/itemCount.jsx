@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { MdAdd, MdRemove } from "react-icons/md";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [contador, setContador] = useState(initial);
@@ -32,7 +33,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
               onClick={restar}
               disabled={desaBotonRestar}
             >
-              <i className="fas fa-minus"></i>
+              <MdRemove />
             </button>
             <button className="btn btn-light btn-block mt-1">{contador}</button>
             <button
@@ -40,7 +41,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
               onClick={sumar}
               disabled={desaBotonSumar}
             >
-              <i className="fas fa-plus"></i>
+              <MdAdd />
             </button>
           </div>
         </div>

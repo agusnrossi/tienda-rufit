@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Button } from "react-bootstrap";
 import ItemCount from "../counter/itemCount";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ item }) => {
@@ -34,26 +34,24 @@ const ItemDetail = ({ item }) => {
         {cantCompra !== 0 && (
           <div className="container">
             <div className="row">
-              <Button
-                className="btn btn-outline-primary mb-2"
-                as={Link}
-                exact
-                to={"/"}
-                onClick={() => addItem({ item, cantCompra })}
-              >
-                Agregar al Carrito y Seguir Comprando
-              </Button>
+              <NavLink exact to="/">
+                <Button
+                  variant="btn btn-outline-primary mb-2"
+                  onClick={() => addItem({ item, cantCompra })}
+                >
+                  Agregar al Carrito
+                </Button>
+              </NavLink>
             </div>
             <div className="row">
-              <Button
-                variant="success"
-                as={Link}
-                exact
-                to={"/cart"}
-                onClick={() => addItem({ item, cantCompra })}
-              >
-                Terminar compra{" "}
-              </Button>
+              <NavLink exact to={"/cart"}>
+                <Button
+                  variant="success"
+                  onClick={() => addItem({ item, cantCompra })}
+                >
+                  comprar ahora{" "}
+                </Button>
+              </NavLink>
             </div>
           </div>
         )}

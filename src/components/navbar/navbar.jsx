@@ -24,13 +24,13 @@ const NavBar = () => {
                 Home
               </Nav.Link>
               <NavDropdown title="Productos" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#Productos/3.1">
+                <NavDropdown.Item as={Link} to="/category/Remeras">
                   Remeras
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#Productos/3.2">
+                <NavDropdown.Item as={Link} to="/category/Accesorios">
                   Accesorios
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#Productos/3.3">
+                <NavDropdown.Item as={Link} to="/category/Suplementos">
                   Suplementos
                 </NavDropdown.Item>
               </NavDropdown>

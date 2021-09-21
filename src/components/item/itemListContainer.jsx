@@ -15,7 +15,7 @@ const ItemListContainer = () => {
     if (category) {
       itemCollection = db
         .collection("item")
-        .where("category", "==", `${category}`);
+        .where("categoryName", "==", `${category}`);
     } else {
       itemCollection = db.collection("item");
     }
