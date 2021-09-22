@@ -11,7 +11,7 @@ export const CartDetailList = ({ data }) => {
 
   return (
     <>
-      <tr key={item.id}>
+      <tr key={item.id} style={{ backgroundColor: "#fff" }}>
         <td className="align-middle text-center fw-bold">{item.id}</td>
         <td className="align-middle text-center fw-bold">{item.title}</td>
         <td className="align-middle text-center fw-bold">{item.description}</td>
@@ -30,7 +30,7 @@ export const CartDetailList = ({ data }) => {
         </td>
         <td className="align-middle text-center fw-bold">
           <Button
-            variant="primary"
+            variant="danger"
             onClick={() => {
               removeItem(item.id);
             }}

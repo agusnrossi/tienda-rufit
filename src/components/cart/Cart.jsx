@@ -21,8 +21,8 @@ const Cart = () => {
     </tr>
     ;
   return (
-    <div className="container">
-      <h1 className="text-center mt-2">Terminar mi compra</h1>
+    <div className="container" style={{ backgroundColor: "#fff" }}>
+      <h1 className="text-center mt-2" >Terminar mi compra</h1>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -53,15 +53,15 @@ const Cart = () => {
             <div className="col-md-6 offset-md-3">
               <div className="d-flex justify-content-around mt-3">
                 <NavLink exact to={"/"}>
-                  <Button variant="primary">
+                  <Button variant="primary" className="rounded-pill p-2 mb-5 shadow">
                     Seguir Comprando
                   </Button>
                 </NavLink>
-                <Button variant="danger" onClick={() => clear()}>
+                <Button variant="danger" className="rounded-pill mb-5 shadow p-2" onClick={() => clear()}>
                   Vaciar carrito
                 </Button>
                 <NavLink exact to={"/checkout"}>
-                  <Button variant="success">
+                  <Button variant="success" className="rounded-pill p-2 mb-5 shadow">
                     Finalizar Compra
                   </Button>
                 </NavLink>

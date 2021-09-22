@@ -2,14 +2,15 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RouterApp from "./Router/Router";
 import { CartProvider } from "./providers/CartProvider";
+import background from "./img/club_rufian_fondo.jpg";
 
 function App() {
   return (
     <div
-      className="App "
       style={{
-        backgroundImage: 'url("//img/club_rufian_fondo.jpg")',
-        backgroundPosition: "center",
+        backgroundColor: "#140e0c",
+        backgroundImage: `url(${background})`,
+        backgroundPosition: " -278px",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}

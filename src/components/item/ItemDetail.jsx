@@ -15,18 +15,18 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="d-flex justify-content-center my-5">
-      <div className="card" style={{ width: "30rem", padding: "10px" }}>
+      <div className="card" style={{ width: "20rem", padding: "10px" }}>
         <img
           src={item.pictureUrl}
           alt={item.description}
           className="card-img-top border border-dark rounded "
         />
         <div className="card-body">
-          <h5 className="card-title">{item.title}</h5>
+          <h5 className="card-title fs-4 fw-bold">{item.title}</h5>
           <p className="card-text">{item.description}</p>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Precio: ${item.price}</li>
+          <li className="list-group-item fw-bold ">Precio: ${item.price}</li>
         </ul>
         {cantCompra === 0 && (
           <ItemCount stock={item.amount} initial={1} onAdd={onAdd} />

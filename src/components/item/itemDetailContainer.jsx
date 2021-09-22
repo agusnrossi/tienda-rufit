@@ -14,9 +14,7 @@ const ItemDetailContainer = () => {
     const itemCollection = db.collection("item");
     const itemById = itemCollection.doc(id);
 
-    itemById
-      .get()
-      .then((querySnapshot) => {
+    itemById.get().then((querySnapshot) => {
         if (Object.keys(querySnapshot).length === 0) {
           console.log("No results!");
         }
