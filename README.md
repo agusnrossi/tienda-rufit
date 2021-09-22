@@ -5,7 +5,7 @@
 En esta tienda encontraras distintos productos para realizar actividad fisica.
 
 
-##DEMO
+# #DEMO
 
 ![Tienda-Rufit](/tienda-Rufit.gif)
 
@@ -13,6 +13,9 @@ En esta tienda encontraras distintos productos para realizar actividad fisica.
 
 
 
+# Enlace al proyecto
+
+[http://localhost:3000](http://localhost:3000) 
 
 
 # Librerias, frameworks y tecnologias utilizados:
@@ -44,9 +47,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-To install node dependeces
 ### `npm start`
 
-Hacer click en este enlace para ver la tienda en el buscador.
-[http://localhost:3000](http://localhost:3000) 
+
 
