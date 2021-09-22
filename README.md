@@ -1,6 +1,6 @@
 
-#Proyecto Curso React Js - Coderhouse : Tienda Rufit
-##Autor: Agustin Rossi
+# Proyecto Curso React Js - Coderhouse : Tienda Rufit
+## Autor: Agustin Rossi
 
 En esta tienda encontraras distintos productos para realizar actividad fisica.
 
@@ -15,13 +15,19 @@ En esta tienda encontraras distintos productos para realizar actividad fisica.
 
 
 
-#Librerias, frameworks y tecnologias utilizados:
--CSS
--React
--React Bootstrap
--Bootstrap 5
--React icons
--Firebase/ Firestore
+# Librerias, frameworks y tecnologias utilizados:
+
+- CSS
+
+- React
+
+- React Bootstrap
+
+- Bootstrap 5
+
+- React icons
+
+- Firebase/ Firestore
 
 
 
