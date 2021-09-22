@@ -48,5 +48,5 @@ To install node dependeces
 ### `npm start`
 
 Hacer click en este enlace para ver la tienda en el buscador.
-Open [http://localhost:3000](http://localhost:3000) 
+[http://localhost:3000](http://localhost:3000) 
 
