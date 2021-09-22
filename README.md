@@ -47,6 +47,6 @@ In the project directory, you can run:
 To install node dependeces
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Hacer click en este enlace para ver la tienda en el buscador.
+Open [http://localhost:3000](http://localhost:3000) 
 
