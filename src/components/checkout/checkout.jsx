@@ -38,9 +38,9 @@ export const Checkout = () => {
       .add(newOrder)
       .then(({ id }) => {
         setMensaje(
-          <Modal.Dialog>
+          <Modal.Dialog >
             <Modal.Body>
-              <p className="text-center mt-5 text-warning bg-dark">
+              <p className="text-center mt-5 text-dark fs-3 text-middle">
                 Gracias por su Compra, su numero de identificacion es: ${id}
               </p>
             </Modal.Body>
